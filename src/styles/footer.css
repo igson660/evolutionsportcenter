@@ -1,0 +1,21 @@
+.footer{
+  text-align: center;
+  background-color: rgb(139, 139, 139);
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+}
+
+.div-footer{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 5px;
+}
+
+.footer-itens{ 
+  margin: 10px;
+}

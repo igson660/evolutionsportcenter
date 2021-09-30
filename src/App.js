@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import TeacherDetail from './Pages/TeacherDetail';
+import AboutMe from './Pages/AboutMe';
+import Home from './Pages/Home';
+import Plans from './Pages/Plans';
+import Programs from './Pages/Programs';
+import Shedules from './Pages/Shedules';
+import ProgramsDetail from './Pages/ProgramsDetail';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <Route exact path="/" component={ Home }/>
+      <Route exact path="/planos" component={ Plans }/>
+      <Route exact path="/horarios" component={ Shedules }/>
+      <Route exact path="/programas" component={ Programs }/>
+      <Route exact path="/quem-somos" component={ AboutMe }/>
+      <Route exact path="/quem-somos/:id" component={ TeacherDetail } />
+      <Route exact path="/programas/:id" component={ ProgramsDetail } />
+    </Switch>
   );
 }
-
-export default App;
