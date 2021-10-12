@@ -1,37 +1,36 @@
-import React from 'react';
-import { Dropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/header.css';
+import React, { useState } from 'react';
 import logo from '../images/logo.jpg'
+import NavRightStyle from '../styles/header/navRightStyle';
+import BurguerStyle from '../styles/header/burguerStyle'
+import HeaderStyle from '../styles/header/headerStyle'
 
 export default function Header() {
+  const [open, setOpen] = useState(false)
   return (
-    <header className="header">
-      <div className="div-header">
-        <div>
-          <a href="/">
-            <img
-              alt="Logo do centro de treinamento de artes marciais"
-              src={logo}
-              className="logoImage"
-            />
+    <HeaderStyle >
+      <header>
+        <nav>
+          <a href="/" className="logo">
+            <img className="logoImage" alt="Logo do centro de treinamento de artes marciais" src={logo}/>
           </a>
-        </div>
-        <div>
-          <Dropdown>
-            <Dropdown.Toggle variant="success" id="dropdown-basic">
-              Menu
-            </Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="/">Home</Dropdown.Item>
-              <Dropdown.Item href="/quem-somos">Quem Somos</Dropdown.Item>
-              <Dropdown.Item href="/programas">Programas</Dropdown.Item>
-              <Dropdown.Item href="/horarios">Horários</Dropdown.Item>
-              <Dropdown.Item href="/planos">Planos</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-        </div>
-      </div>
-    </header>
+          <BurguerStyle open={open} onClick={ () => setOpen(!open)}>
+            <div className="mobile-menu">
+              <div className="line1"/>
+              <div className="line2"/>
+              <div className="line3"/>
+            </div>
+          </BurguerStyle>
+          <NavRightStyle open={open}>
+          <ul>
+            <li><a href="/" onClick={ () => setOpen(!open)}>Home</a></li>
+              <li><a href="/quem-somos" onClick={ () => setOpen(!open)}>Quem somos</a></li>
+              <li><a href="/programas" onClick={ () => setOpen(!open)}>Programas</a></li>
+              <li><a href="/horarios" onClick={ () => setOpen(!open)}>Horários</a></li>
+              <li><a href="/planos" onClick={ () => setOpen(!open)}>Planos</a></li>
+            </ul>
+          </NavRightStyle>
+        </nav>
+      </header>
+    </HeaderStyle>
   );
 }
