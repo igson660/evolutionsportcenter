@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import Footer from '../Components/Footer';
-import Header from '../Components/Header';
 import horario_jiu from '../images/horario_jiu.jpeg';
 import horario_muay from '../images/horario_muay.jpeg';
 import '../styles/shedules.css';
@@ -9,7 +8,6 @@ import '../styles/shedules.css';
 export default function Shedules() {
   return (
     <>
-      <Header />
       <main>
         <Carousel>
           <Carousel.Item interval={4000} >

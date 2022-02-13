@@ -1,13 +1,11 @@
 import React from 'react';
 import '../styles/aboutMe.css';
 import Footer from '../Components/Footer';
-import Header from '../Components/Header';
 import CarouselTeachers from '../Components/CarouselTeachers';
 
 export default function AboutMe() {
   return (
     <>
-      <Header />
       <main>
         <section className="about-me-section-1">
           <h1>Evolution Sport Center</h1>

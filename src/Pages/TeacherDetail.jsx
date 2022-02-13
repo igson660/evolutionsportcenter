@@ -3,7 +3,6 @@ import '../styles/teacherDatail.css';
 import { Link, useHistory } from 'react-router-dom';
 import teachers from '../data/dataTeacher'
 import Footer from '../Components/Footer';
-import Header from '../Components/Header';
 import SocialMedia from '../Components/SocialMedias';
 
 export default function TeacherDetail() {
@@ -22,7 +21,6 @@ export default function TeacherDetail() {
 
   return (
     <>
-      <Header />
       <main className="main-datail">
         <h3 className="main-datail-h3">{teacher.name}</h3>
         <p>{teacher.history}</p>

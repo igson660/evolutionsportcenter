@@ -2,14 +2,12 @@ import React from 'react';
 import '../styles/programs.css';
 import { Carousel } from 'react-bootstrap';
 import Footer from '../Components/Footer';
-import Header from '../Components/Header';
 import ProgramsCard from '../Components/ProgramsCard';
 import programs from '../data/dataPrograms';
 
 export default function Programs() {
   return (
     <>
-      <Header />
       <main >
         <Carousel>
           {

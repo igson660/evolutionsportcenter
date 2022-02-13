@@ -3,7 +3,6 @@ import '../styles/programsDatail.css';
 import { Link, useHistory } from 'react-router-dom';
 import programs from '../data/dataPrograms'
 import Footer from '../Components/Footer';
-import Header from '../Components/Header';
 
 export default function TeacherDetail() {
   const { location: { pathname } } = useHistory();
@@ -13,7 +12,6 @@ export default function TeacherDetail() {
 
   return (
     <>
-      <Header />
       <main className="main-datail">
         <h3 id="title-program">{program.name}</h3>
         <p id="text-program">{program.description}</p>

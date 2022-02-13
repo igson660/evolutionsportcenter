@@ -1,34 +1,31 @@
 import styled from 'styled-components';
 
-const NavRightStyle = styled.div`
-
-ul {
-    list-style: none;
-    display: flex;
-  }
+const Ul = styled.ul`
+  margin: auto none;
+  list-style: none;
+  display: flex;
 
   li {
     letter-spacing: 3px;
     margin-left: 32px;
     transition: .3s;
+    margin: auto none;
+      &:hover {
+        border-bottom: 1px solid #fff;
   }
-
-  li:hover {
-    border-bottom: 1px solid #fff;
-  }
+}
 
 a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
-  }
 
-  a:hover {
+  &:hover {
     opacity: 0.7;
   }
+}
 
 @media (max-width: 999px) {
-    ul {
       position: absolute;
       top: 18vh;
       right: 0;
@@ -41,7 +38,6 @@ a {
       transition: transform 0.3s ease-in;
       transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
       z-index: 1000;
-    }
 
     li {
       margin-left: 0;
@@ -55,4 +51,4 @@ a {
   }
 `;
 
-export default NavRightStyle;
+export default Ul;

@@ -7,17 +7,21 @@ import Plans from './Pages/Plans';
 import Programs from './Pages/Programs';
 import Shedules from './Pages/Shedules';
 import ProgramsDetail from './Pages/ProgramsDetail';
+import Header from './Components/Header';
 
 export default function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={ Home }/>
-      <Route exact path="/planos" component={ Plans }/>
-      <Route exact path="/horarios" component={ Shedules }/>
-      <Route exact path="/programas" component={ Programs }/>
-      <Route exact path="/quem-somos" component={ AboutMe }/>
-      <Route exact path="/quem-somos/:id" component={ TeacherDetail } />
-      <Route exact path="/programas/:id" component={ ProgramsDetail } />
-    </Switch>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={ Home }/>
+        <Route exact path="/planos" component={ Plans }/>
+        <Route exact path="/horarios" component={ Shedules }/>
+        <Route exact path="/programas" component={ Programs }/>
+        <Route exact path="/quem-somos" component={ AboutMe }/>
+        <Route exact path="/quem-somos/:id" component={ TeacherDetail } />
+        <Route exact path="/programas/:id" component={ ProgramsDetail } />
+      </Switch>
+    </>
   );
 }
